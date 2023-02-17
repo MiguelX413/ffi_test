@@ -5,6 +5,7 @@ use std::path::PathBuf;
 
 fn main() {
     let bindings = bindgen::Builder::default()
+        .use_core()
         .header("bindings.h")
         .generate()
         .expect("Unable to generate bindings");
